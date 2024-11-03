@@ -61,7 +61,7 @@ export function anthropicChat(clientClass, MODEL) {
     messages.push({ role: "user", content: userMessage });
 
     let result = "";
-    const response = await client.messages.create({
+    const response = await client.beta.messages.create({
       model: 'claude-3-5-sonnet-20241022',
       betas: ["pdfs-2024-09-25", "prompt-caching-2024-07-31"],
       max_tokens,
@@ -115,7 +115,7 @@ export function anthropicChat(clientClass, MODEL) {
     messages.push(pdfMessage);
 
     let result = "";
-    const response = await client.messages.create({
+    const response = await client.beta.messages.create({
       model: 'claude-3-5-sonnet-20241022',
       betas: ["pdfs-2024-09-25", "prompt-caching-2024-07-31"],
       max_tokens,

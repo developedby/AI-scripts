@@ -41,8 +41,8 @@ Output Format Rules:
 
 Example Output:
 <CODE index="0">
-cat > QuickSort.hs << EOL
-module QuickSort where
+cat > QuickSort.hs << 'EOL'
+module Main where
 
 quickSort :: Ord a => [a] -> [a]
 quickSort [] = []
@@ -50,6 +50,9 @@ quickSort (x:xs) = quickSort lesser ++ [x] ++ quickSort greater
   where
     lesser = filter (< x) xs
     greater = filter (>= x) xs
+
+main = print (quickSort [5,3,1,4,2])
+
 EOL
 </CODE>
 
@@ -154,7 +157,7 @@ async function tryCode(response) {
     const preview = block.code.split('\n')[0].slice(0, 60) +
       (block.code.split('\n')[0].length > 60 ? '...' : '');
 
-    console.log(`\n\x1b[33mCode block ${block.index}/${codeBlocks.length}:\x1b[0m ${preview}`);
+    console.log(`\n\x1b[33mCode block ${block.index+1}/${codeBlocks.length}:\x1b[0m ${preview}`);
     const answer = await prompt('Execute? (Y/n) ');
 
     if (answer.toLowerCase() !== 'n') {

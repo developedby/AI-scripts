@@ -18,7 +18,8 @@
     "kindcoder": "kindcoder.mjs",
     "koder": "koder.mjs",
     "refactor": "refactor.mjs",
-    "ts-deps": "ts-deps.mjs"
+    "ts-deps": "ts-deps.mjs",
+    "paper-impl": "paper-impl.mjs"
   },
   "scripts": {},
   "keywords": [
@@ -29,7 +30,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.19.1",
+    "@anthropic-ai/sdk": "^0.31.0",
     "@google/generative-ai": "^0.12.0",
     "@openrouter/ai-sdk-provider": "^0.0.5",
     "@portkey-ai/gateway": "^1.4.0",

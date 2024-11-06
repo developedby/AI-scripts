@@ -1,3 +1,6 @@
 node_modules/
 ab_challenge/
 tmp/
+.log.txt
+.msg.txt
+.sys.txt
